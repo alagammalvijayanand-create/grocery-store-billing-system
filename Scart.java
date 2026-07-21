@@ -14,7 +14,7 @@ class ShoppingCart{
     }
     
     public boolean applyDiscount(String code){
-        if(code=="SAVE20" && !discountApplied && !isCheckedOut){
+        if(code=="SAVE10" && !discountApplied && !isCheckedOut){
             discountApplied = true;
             return true;
         }
@@ -44,10 +44,10 @@ public class Scart{
 
         System.out.println("Total: $" + cart.getTotal());
 
-        System.out.println("Discount: " + cart.applyDiscount("SAVE20"));
+        System.out.println("Discount: " + cart.applyDiscount("SAVE10"));
         System.out.println("Total: $" + cart.getTotal());
 
-        System.out.println("Discount: " + cart.applyDiscount("SAVE20"));
+        System.out.println("Discount: " + cart.applyDiscount("SAVE10"));
 
         cart.checkout();
         cart.addItem("BodyWash", 99.99);
